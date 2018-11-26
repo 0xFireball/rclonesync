@@ -545,7 +545,7 @@ if __name__ == '__main__':
     if pyversion < 2.7:
         print("ERROR  The Python version must be >= 2.7.  Found version: {}".format(pyversion)); exit()
 
-    parser = argparse.ArgumentParser(description="***** BiDirectional Sync for Cloud Services using rclone *****")
+    parser = argparse.ArgumentParser(description="***** rclonesync - bidirectional sync with rclone *****")
     parser.add_argument('Path1',
                         help="Local path, or cloud service with ':' plus optional path.  Type 'rclone listremotes' for list of configured remotes.")
     parser.add_argument('Path2',
