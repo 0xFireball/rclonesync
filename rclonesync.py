@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""BiDirectional Sync using rclone"""
+"***** rclonesync - bidirectional sync with rclone *****"
 
 __version__ = "V2.4 181004-1"                          # Version number and date code
 
@@ -615,7 +615,7 @@ if __name__ == '__main__':
     else:
         logging.basicConfig(format='%(message)s')
 
-    logging.warning("***** BiDirectional Sync for Cloud Services using rclone *****")
+    logging.warning("***** rclonesync - bidirectional sync with rclone *****")
 
     try:
         clouds = subprocess.check_output([rclone, 'listremotes'])
