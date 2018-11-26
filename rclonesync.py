@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """BiDirectional Sync using rclone"""
 
-__version__ = "V2.4 181004"                          # Version number and date code
+__version__ = "V2.4 181004-1"                          # Version number and date code
 
 
 #==========================================================================================================
@@ -10,6 +10,8 @@ __version__ = "V2.4 181004"                          # Version number and date c
 # Chris Nelson, November 2017 - 2018
 # Revision and contributions:
 #   Hildo G. Jr.
+# Additional Modifications:
+#   0xFireball
 #
 # See README.md for revision history
 #
@@ -519,6 +521,7 @@ def request_lock(caller):
             with open(LOCK_FILE, 'w') as fd:
                 fd.write("Locked by {} at {}\n".format(caller, time.asctime(time.localtime())))
                 logging.debug("LOCKed by {} at {}.".format(caller, time.asctime(time.localtime())))
+                logging.debug("LOCKFILE at {}".format(LOCK_FILE))
             return 0
     logging.warning("Timed out waiting for LOCK file to be cleared.  {}".format(locked_by))
     return -1
