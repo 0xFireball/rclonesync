@@ -58,7 +58,7 @@ def bidirSync():
     path1_list_file = list_file_base + '_Path1'
     path2_list_file = list_file_base + '_Path2'
 
-    logging.warning("Synching Path1  <{}>  with Path2  <{}>".format(path1_base, path2_base))
+    logging.warning("Syncing Path1  <{}>  with Path2  <{}>".format(path1_base, path2_base))
     logging.info("Command line:  <{}>".format(args))
 
 
